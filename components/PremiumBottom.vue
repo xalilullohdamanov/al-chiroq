@@ -24,7 +24,7 @@
         <img class="media" src="../public/premiumbottom.svg" alt="">
     </sections>
   
-    
+    <img src="../public/mini-imge3.svg" alt="" class="mini__img3">
   </section>
     </div>
     

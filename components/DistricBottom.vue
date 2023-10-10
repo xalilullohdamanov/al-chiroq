@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="section container">
+        <section class="section2 container">
             
          
             
@@ -27,7 +27,7 @@
         <img class="media" src="../public/districbottom.svg" alt="">
     </sections>
   
-    
+    <img src="../public/mini-imge2.svg" alt="" class="mini__img2">
   </section>
   
     </div>

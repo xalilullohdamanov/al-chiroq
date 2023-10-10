@@ -17,36 +17,65 @@ a {
     width: 100%;
     padding: 0 15px ;
     margin: 0 auto;
+    
 }
 
 .nav__content{
+    padding: 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex: 1 0 0;;
-padding: 24px 0;
-
+margin-bottom: 30px;
+background-color: #f5f5f5;
+ 
+   
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    max-width: 1194px;
+    text-align: center;
+}
+body{
+    background-color: #f5f5f5;
 }
 .logo1{
     margin-right: 24px;
+    width: 130px;
+    height: 50px;
+}
+.logo2{
+    height: 55px;
+    width: 90px;
 }
 .logo{
-    width: 152.348px;
-height: 48px;
+    width: 152px;
+height: 44px;
 }
+.media__img{
+    color:  #ffc107;
+}
+.section2
 .section1,
 .section{
     display: flex;
     
 }
+
 .section__title{
+    
     color: #3F3356;
     font-size: 40px;
     width: 700px;
-    font-weight: 600;
+    
     line-height: 48px;
     margin-bottom: 16px;
-    
+    -webkit-text-fill-color: transparent;
+
+    background: linear-gradient(900.03deg,#934ad3 1.1%,#000 51.50%);
+    -webkit-background-clip: text;
+    background-clip: text;
 
 
 
@@ -59,14 +88,55 @@ font-size: 16px;
 font-weight: 400;
 line-height: 24px; /* 150% */
 }
+.section2{
+    position: relative;
+}
+.mini__img2{
+    position: absolute;
+   left: 0;
+    top: 0;
+    width: 117.499px;
+height: 117.499px;
+
+flex-shrink: 0;
+
+
+transform: translateX(-144px);
+}
+.mini__img3{
+     
+    position: absolute;
+  right: 0;
+   top: 0;
+    width: 117.499px;
+height: 117.499px;
+flex-shrink: 0;
+transform: translateY(-144px);
+
+}
+.mini__img1{
+    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 117.499px;
+height: 117.499px;
+flex-shrink: 0;
+transform: rotate(20.539deg);
+
+}
+.section2,
 .section1,
 .section{
     display: flex;
     justify-content: space-between;
     margin-top: 140px;
     margin-bottom: 10px;
-  
+    position: relative;
+
+
 }
+
 
 
 .href{
@@ -106,18 +176,24 @@ color:  #843AC6;
 .buttons:hover{
     background: #843AC6;  
     color:#F5F5F5 ;
+    transition: 0.3s;
 }
 .button:hover{
    background: #843AC6;
    color:#F5F5F5 ;
+   transition: 0.3s;
 }
+
 .product__title{
-    
-    color: #843AC6;
-font-size: 32px;
-font-weight: 600;
-line-height: 36px;
+    -webkit-text-fill-color: transparent;
+
+    background: linear-gradient(95.03deg,#934ad3 9.1%,#000 56.50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 32px;
+    line-height: 36px;
 }
+
 /* .href{
     position: absolute;
 }
@@ -152,6 +228,7 @@ margin-bottom: 30px;
 .shop{
 display: flex;
 }
+
 
 
 .shop__text{
@@ -212,15 +289,13 @@ display: flex;
     background: 145deg, #313331 -5.05%, #181716 105.01%;
 background-clip: text;
 font-size: 16px;
-font-weight: 400;
+
 
 }
 .grid__text{
     
  margin-bottom: 20px;
 font-size: 20px;
-
-font-weight: 600;
 line-height: 24px; 
 background: 145deg, #313331 -5.05%, #181716 105.01%;
 background-clip: text;
@@ -235,6 +310,7 @@ background-clip: text;
     width: 22px;
 height: 22px;
 
+
 }
 .grid__img1{
 margin-left: 40px;
@@ -242,7 +318,7 @@ padding-bottom: 35px;
 }
 @media(max-width:1236px){
     .container{
-        max-width: 1000px;
+        max-width: 900px;
     }
     .section__text {
         
@@ -252,7 +328,10 @@ padding-bottom: 35px;
     }
     .section__title {
         font-size: 31px;
-        width: 678px
+        width: 595px;
+    }
+    .nav__content{
+        max-width: 900px;
     }
     .media1{
         max-width: 300px;
@@ -299,6 +378,9 @@ padding-bottom: 35px;
         font-size: 13px;
         
     }
+    .nav__content{
+        max-width: 900px;
+    }
     .section__title {
         font-size: 25px;
         width: 524px;
@@ -322,6 +404,7 @@ padding-bottom: 35px;
     .media__img{
         max-width: 140px;
     }
+    .section2,
     .section1,
     .section{
         margin-top: 42px;
@@ -371,8 +454,17 @@ padding-bottom: 35px;
 }
 @media(max-width:950px){
     .nav__content{
-        max-width: 650px;
+        max-width: 674px
     }
+ .mini__img3,
+ .mini__img2{
+    width: 84.499px;
+    height: 60.499px
+ }   
+.mini__img1{
+    width: 81.499px;
+    height: 101.499px;
+}
     .container {
         max-width: 775px;
     }
@@ -457,6 +549,16 @@ padding-bottom: 35px;
     .container {
         max-width: 573px;
     }
+    .mini__img2,
+    .mini__img3,
+     .mini__img1{
+       opacity: 1;
+       transform: translatey(0);
+       width: 0;
+     }
+    .nav__content{
+        max-width: 573px;
+    }
     .section__title {
         font-size: 14px;
         width: 353px;
@@ -471,7 +573,7 @@ padding-bottom: 35px;
         height: 28px;
     }
     .logo2 {
-        height: 25px;
+        height: 36px;
     }
     .media__img {
         max-width: 116px;
@@ -530,8 +632,13 @@ padding-bottom: 35px;
     }
 }
 @media(max-width:600px){
- 
-  
+ .mini__img2,
+ .mini__img3,
+  .mini__img1{
+    opacity: 1;
+    transform: translatey(0);
+    width: 0;
+  }
     .section{
         display: flex;
         flex-direction: column-reverse;
@@ -539,6 +646,7 @@ padding-bottom: 35px;
         margin-top: 0;
 
     }
+    .section2,
     .section1{
         display: flex;
         flex-direction: column;
@@ -571,6 +679,7 @@ padding-bottom: 35px;
     text-align: center;
     width: 354px
 }
+.section2,
 .section1{
     text-align: center;
 }
@@ -578,12 +687,15 @@ padding-bottom: 35px;
     text-align: center;
 }
 .logo2 {
-    height: 19px;
+    height: 48px;
 }
 .nav__content {
     max-width: 427px;
 }
 .container {
+    max-width: 390px;
+}
+.nav__content{
     max-width: 390px;
 }
 .product__text{
@@ -623,6 +735,11 @@ padding-bottom: 35px;
 .footer_1{
     margin-bottom: 9px;
 }
+.logo1{
+    max-width: 76px;
+    height: 44px;
+    margin-right: 1px
+}
 .header__footer{
     padding-top: 2px;
     
@@ -631,6 +748,9 @@ padding-bottom: 35px;
 @media(max-width:400px){
     .container {
         max-width: 321px;
+    }
+    .nav__content{
+        max-width: 296px
     }
     .media1 {
         max-width: 204px;
@@ -682,5 +802,17 @@ padding-bottom: 35px;
     }
     .media__img {
         max-width: 78px;
+    }
+    .logo2 {
+        height: 39px;
+        width: 44px;
+    }
+    .logo1 {
+        max-width: 61px;
+        height: 37px;
+        margin-right: 1px;
+    }
+    .media__img {
+        max-width: 90px;
     }
 }
