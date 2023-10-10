@@ -76,3 +76,4 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 # al-chiroq
 # al-chiroq
 # al-chiroq
+# al-chiroq-nuxt
