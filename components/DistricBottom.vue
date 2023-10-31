@@ -1,20 +1,25 @@
 <template>
     <div>
-        <section class="section2 container">
+        <section class="section3 container" data-aos="fade-right">
             
          
             
-    <section class="work">
+    <section class="work works">
         <h1 class="product__title">
-            Наличие Телеграм Бота
+            <!-- {{ $t('product__title5') }} -->
+            <span v-html="props.districtitle?.title"></span>
+          <!-- <strong></strong> -->
         </h1>
         <p class="product__text">
-            Полный функционал мобильного приложения Al Chiroq доступен в телеграм-боте. Заходите с любого устройства для того, чтобы получать ежедневные бонусы, а также совершать покупки в магазине за заработанные коины. 
+            <!-- {{ $t('product__text5') }} -->
+            <span v-html="props. districtext?.description"></span>
         </p>
         <section class="href">
             
             <button class="button">
-                Скачать приложение
+                {{ $t('product__button5') }}
+               
+                
             </button>
 
            
@@ -24,7 +29,7 @@
     
     <sections class="img">
         
-        <img class="media" src="../public/districbottom.svg" alt="">
+        <img class="media" :src="districImage?.image" alt="">
     </sections>
   
     <img src="../public/mini-imge2.svg" alt="" class="mini__img2">
@@ -34,3 +39,18 @@
    
     
 </template>
+<script setup>
+
+const props = defineProps({
+   districtitle: Object,
+  required: true,
+  districtext: Object,
+  required: true,
+  districImage:Object,
+  required: true,
+//   image:Object,
+//   required: true,
+  
+})
+
+</script>

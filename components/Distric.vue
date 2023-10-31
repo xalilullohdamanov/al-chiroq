@@ -1,21 +1,24 @@
 <template>
     <div>
-        <section class="section1 container">
+        <section class="section1 container" data-aos="fade-left">
             
             <sections class="img">
         <img class="media" src="../public/distric.svg" alt="">
     </sections>
             
-    <section class="work">
+    <section class="work works">
         <h1 class="product__title">
-            Играй и зарабатывай Fit-Coin!
+            {{ $t('product__title4') }}
+           <strong></strong>
         </h1>
         <p class="product__text">
-            Играйте в разнообразные игры и зарабатывайте Fit-coin для получения бонусов в наших приложениях.
+            {{ $t('product__text4') }}
+           
         </p>
         <section class="href">
             <button class="button">
-                Скачать приложение
+                {{ $t('product__button4') }}
+               
             </button>
 
          

@@ -11,8 +11,13 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/i18n": "^8.0.0-rc.5",
     "nuxt": "^3.7.4",
+    "sass": "^1.69.4",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
   }
 }

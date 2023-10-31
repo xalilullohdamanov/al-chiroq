@@ -1,19 +1,20 @@
 <template>
     <div>
-        <section class="section container">
-            
-            
-            
-    <section class="work">
+        <section class="section container" data-aos="fade-left">
+    <section class="work works">
         <h1 class="product__title">
-            Возможность выиграть множество различных призов!
+            <!-- {{ $t('product__title8') }} -->
+            <span v-html="props.next?.title"></span>
+           <!-- <strong></strong>  <strong></strong> -->
         </h1>
         <p class="product__text">
-           Выполняйте активности в нашем боте или приложении, и зарабатывайте монеты, которые можно потратить на дополнительные ресурсы в виде мегабайт, минут, СМС, а также приобрести товары в нашем маркет-плейсе
+            <!-- {{ $t('product__text8') }} -->
+            <span v-html="props.text?.description"></span>
         </p>
         <section class="href">
             <button class="button">
-                Скачать приложение
+                {{ $t('product__button8') }}
+             
             </button>
 
          
@@ -21,7 +22,7 @@
        
     </section>
     <sections class="img">
-        <img class="media" src="../public/boy.svg" alt="">
+        <img class="media" :src="nextimage?.image" alt="">
     </sections>
   
     
@@ -29,3 +30,19 @@
     </div>
     
 </template>
+<script setup>
+
+const props = defineProps({
+   next: Object,
+  required: true,
+  text: Object,
+  required: true,
+  nextimage:Object,
+  required: true,
+ 
+//   image:Object,
+//   required: true,
+  
+})
+
+</script>
