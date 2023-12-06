@@ -26,36 +26,59 @@
                                     <img  src="../public/en-bayroq.png" alt="" class="nav__dropdown-img1">
                                     <span  class="en">en</span>
                                 </a>
-                                <!-- <ul
-                v-if="langToggle"
-                v-click-outside="hideDropdownOptions"
-                class="header__lang-options"
-                :class="langToggle ? 'show' : 'hidden'"
-              >
-                <li
-                  v-for="(lang, index) in localeOptions"
-                  :key="index"
-                  @click="langValue(lang)"
-                >
-                  <nuxt-link
-                    :to="switchLocalePath(lang)"
-                    class="header__lang-option"
-                  >
-                    <img :src="require(`../public/en-bayroq.${lang}.png`)" alt="">
-                    <span></span>
-                  </nuxt-link>
-                </li>
-              </ul> -->
                             </lu>
                         </li>  
                     </div> 
+                    <div class="dropdown1">
+                      <div class="select">
+                        <span class="selected"></span>
+                        <div class="caret"></div>
+                        <ul class="menu">
+                          <li>
+                            <img  src="../public/en-bayroq.png" alt="" class="nav__dropdown-img1">
+                          </li>
+                          <li>
+                           jhghjhghg
+                          </li>
+                          <li class="active">
+                            bbjbjb
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                 </nav> 
            </nav> 
     </header>
 </div>
 </template> 
-<script>
-export default {
+<script >
+onMounted(() => {
+  const dropdowns = document.querySelectorAll('.dropdown');
+  dropdowns.forEach(dropdown =>{
+    const select = dropdown.querySelector('.select');
+    const caret = dropdown.querySelector('.caret');
+    const menu = dropdown.querySelector('.menu');
+    const selected = dropdown.querySelector('.selected');
+    select.addEventListener('click',()=>
+  select.classList.toggle('select-clicked'),
+  caret.classList.toggle('caret-rotate'),
+  menu.classList.toggle('menu-open'),
+  )
+  options.forEach(option =>{
+    option.addEventListener('click', () => {
+      selected.innerText = option.innerText;
+      select.classList.remove('select-clicked');
+      caret.classList.remove('caret-rotate');
+      menu.classList.remove('menu-open');
+      option.forEach(option =>{
+        option.classList.remove('active');
+      });
+      option.classList.add('active');
+    });
+  });
+});
+}),
+// export default {
   
   // name: "index",
   // directives: {
@@ -87,70 +110,70 @@ export default {
   //   this.popupItem = this.$el
   // },
 
-  methods: {
+  // methods: {
 
-    // refreshWindow() {
-    //   window.scrollTo(0, 0)
-    // },
-    change(){
-      this.$i18n.locale = 'uz'
-    }, 
-    changes(){
-      this.$i18n.locale = 'en'
-    },
-    changess(){
-      this.$i18n.locale = 'ru'
-    },
-    // getLocaleFromStorage() {
-    //   this.selectedLocale = this.$i18n.locale
-    // },
+  //   // refreshWindow() {
+  //   //   window.scrollTo(0, 0)
+  //   // },
+  //   change(){
+  //     this.$i18n.locale = 'uz'
+  //   }, 
+  //   changes(){
+  //     this.$i18n.locale = 'en'
+  //   },
+  //   changess(){
+  //     this.$i18n.locale = 'ru'
+  //   },
+  //   // getLocaleFromStorage() {
+  //   //   this.selectedLocale = this.$i18n.locale
+  //   // },
 
-    // langValue(value) {
-    //   this.selectedLocale = value
-    //   this.langToggle = false
-    //   localStorage.setItem('locale', this.selectedLocale)
-    //   this.hamburgerClass = ''
-    //   this.isOpened = false
-    //   this.ariaExpanded = true
-    //   this.filterLocales()
-    // },
+  //   // langValue(value) {
+  //   //   this.selectedLocale = value
+  //   //   this.langToggle = false
+  //   //   localStorage.setItem('locale', this.selectedLocale)
+  //   //   this.hamburgerClass = ''
+  //   //   this.isOpened = false
+  //   //   this.ariaExpanded = true
+  //   //   this.filterLocales()
+  //   // },
 
 
-    // filterLocales() {
-    //   this.localeOptions = this.$i18n.availableLocales
-    //   this.localeOptions.forEach((item, index) => {
-    //     if (item === this.selectedLocale) {
-    //       this.localeOptions.splice(index, 1)
-    //     }
-    //   })
-    // },
+  //   // filterLocales() {
+  //   //   this.localeOptions = this.$i18n.availableLocales
+  //   //   this.localeOptions.forEach((item, index) => {
+  //   //     if (item === this.selectedLocale) {
+  //   //       this.localeOptions.splice(index, 1)
+  //   //     }
+  //   //   })
+  //   // },
 
-    // toggleLang() {
-    //   this.langToggle = !this.langToggle
-    // },
+  //   // toggleLang() {
+  //   //   this.langToggle = !this.langToggle
+  //   // },
 
-    // hideDropdownOptions() {
-    //   this.langToggle = false
-    // },
+  //   // hideDropdownOptions() {
+  //   //   this.langToggle = false
+  //   // },
 
-    // openMenu() {
-    //   if (this.hamburgerClass !== '') {
-    //     this.hamburgerClass = ''
-    //     this.isOpened = false
-    //     this.ariaExpanded = true
-    //   } else {
-    //     this.hamburgerClass = 'opened'
-    //     this.ariaExpanded = false
-    //     this.isOpened = true
-    //   }
-    // },
+  //   // openMenu() {
+  //   //   if (this.hamburgerClass !== '') {
+  //   //     this.hamburgerClass = ''
+  //   //     this.isOpened = false
+  //   //     this.ariaExpanded = true
+  //   //   } else {
+  //   //     this.hamburgerClass = 'opened'
+  //   //     this.ariaExpanded = false
+  //   //     this.isOpened = true
+  //   //   }
+  //   // },
 
-    // selectNavigation() {
-    //   this.isOpened = false
-    //   this.hamburgerClass = ''
-    // },
-  }
-}
+  //   // selectNavigation() {
+  //   //   this.isOpened = false
+  //   //   this.hamburgerClass = ''
+  //   // },
+  // }
+// }
 </script>
    
 
